@@ -1,19 +1,21 @@
+// Routes.tsx
+
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Inicio from './Inicio';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import App from './App';
 import Computadora from './Computadora';
 import Celular from './Celular';
 
-function App() {
+const RoutesComponent: React.FC = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/" element={<Inicio />} />
+        <Route path="/" element={<App />} />
         <Route path="/computadora" element={<Computadora />} />
         <Route path="/celular" element={<Celular />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
-}
+};
 
-export default App;
+export default RoutesComponent;
